@@ -5,7 +5,7 @@ alias sudo='sudo '
 alias dc='docker compose --env-file /srv/containers/.env'
 alias dps='docker ps --format "table {{.Image}}\t{{.Status}}\t{{.Names}}"'
 alias btop='btop --utf-force'
-alias dtop='/srv/containers/top.sh'
+alias dtop='/srv/containers/dtop.sh'
 
 cdd() {
   # Usage: cdd <container_name>
