@@ -1,6 +1,10 @@
 # enable aliases in sudo
 alias sudo='sudo '
 
+# npm
+alias npmb='npm run build'
+alias npmd='npm run dev'
+
 # docker aliases
 alias dc='docker compose --env-file /srv/containers/.env'
 alias dps='docker ps --format "table {{.Image}}\t{{.Status}}\t{{.Names}}"'
