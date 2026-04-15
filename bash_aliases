@@ -1,11 +1,14 @@
 # enable aliases in sudo
 alias sudo='sudo '
 
+# files
+alias cpg='rsync -ah --info=progress2'
+
 # npm
 alias npmb='npm run build'
 alias npmd='npm run dev'
 
-# docker aliases
+# docker
 alias dc='docker compose --env-file /srv/containers/.env'
 alias dps='docker ps --format "table {{.Image}}\t{{.Status}}\t{{.Names}}"'
 alias btop='btop --utf-force'
