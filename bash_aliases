@@ -9,7 +9,12 @@ alias npmb='npm run build'
 alias npmd='npm run dev'
 
 # docker
-alias dc='docker compose --env-file /srv/containers/.env'
+dc() {
+  local files=()
+  [[ -f .env ]] && files+=(--env-file .env)
+  files+=(--env-file /srv/containers/.env)
+  docker compose "${files[@]}" "$@"
+}
 alias dps='docker ps --format "table {{.Image}}\t{{.Status}}\t{{.Names}}"'
 alias btop='btop --utf-force'
 alias dtop='/srv/containers/dtop.sh'
